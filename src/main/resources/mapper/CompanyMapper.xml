@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xyz.littlezhu.debugmybatis.data.dao.CompanyDao">
+
+    <insert id="insert" parameterType="xyz.littlezhu.debugmybatis.data.domain.Company">
+       INSERT INTO
+       	    public.company
+       		(name , age, address, salary)
+       	VALUES
+       		(#{name}, #{age}, #{address}, #{salary})
+    </insert>
+</mapper>
