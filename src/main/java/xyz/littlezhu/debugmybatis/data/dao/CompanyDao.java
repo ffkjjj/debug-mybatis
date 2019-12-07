@@ -14,4 +14,6 @@ import java.util.List;
 @Mapper
 public interface CompanyDao {
     void insert(Company company);
+
+    int count();
 }

@@ -1,9 +1,12 @@
 package xyz.littlezhu.debugmybatis.util;
 
+import lombok.Data;
+
 /**
  * @author zhul
  * @date 2019/11/30 10:57
  */
+@Data
 public class Result<T> {
     private int code;
     private String msg = SUCCESS;
@@ -14,5 +17,11 @@ public class Result<T> {
 
     public static Result<String> success() {
         return new Result<>();
+    }
+
+    public static <T> Result<T> success(T t) {
+        Result<T> result = new Result<>();
+        result.data = t;
+        return result;
     }
 }

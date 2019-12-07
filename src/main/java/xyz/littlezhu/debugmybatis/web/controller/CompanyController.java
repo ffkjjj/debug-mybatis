@@ -1,6 +1,7 @@
 package xyz.littlezhu.debugmybatis.web.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.littlezhu.debugmybatis.service.ICompanyService;
 import xyz.littlezhu.debugmybatis.util.Result;
@@ -23,5 +24,11 @@ public class CompanyController {
     public Result<?> insert() {
         companyService.insert();
         return Result.success();
+    }
+
+    @RequestMapping("/count")
+    @ResponseBody
+    public Result<Integer> count() {
+        return Result.success(companyService.count());
     }
 }

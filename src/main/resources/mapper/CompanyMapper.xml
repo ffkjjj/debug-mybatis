@@ -7,6 +7,10 @@
        	    public.company
        		(name , age, address, salary)
        	VALUES
-       		(#{name}, #{age}, #{address}, #{salary})
+       		(#{name}, ${age}, #{address}, #{salary})
     </insert>
+
+	<select id="count" resultType="int">
+		select count(id) from company
+	</select>
 </mapper>

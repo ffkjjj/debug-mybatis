@@ -1,5 +1,7 @@
 package xyz.littlezhu.debugmybatis.service;
 
 public interface ICompanyService {
-    public void insert();
+    void insert();
+
+    int count();
 }

@@ -26,4 +26,9 @@ public class CompanyServiceImpl implements ICompanyService {
         company.setSalary(1000.2f);
         companyDao.insert(company);
     }
+
+    @Override
+    public int count() {
+        return companyDao.count();
+    }
 }
